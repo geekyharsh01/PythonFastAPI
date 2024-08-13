@@ -20,10 +20,10 @@ jobs:
         with: 
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          password: ${{ secrets.TOKEN }}
 
       - name: Build and Push Docker image
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/PythonFastAPI/mypythonfastapi:latest
+          tags: ghcr.io/${{ github.repository_owner }}/python_fast_api/mypythonfastapi:latest
